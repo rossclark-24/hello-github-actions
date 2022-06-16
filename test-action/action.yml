@@ -1,2 +1,12 @@
 name: "Test Action"
-Description: "Testing"
+description: "Testing"
+author: "rosshclark24@gmail.com"
+
+inputs:
+  Test_Name:
+    description: "Just use this name"
+    required: True
+    Default: "Tom"
+    
+
+  
