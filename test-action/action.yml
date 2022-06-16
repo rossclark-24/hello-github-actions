@@ -8,5 +8,7 @@ inputs:
     required: True
     Default: "Tom"
     
-
+runs:
+  using: "docker"
+  image: "docker://debian:stretch-slim"
   
