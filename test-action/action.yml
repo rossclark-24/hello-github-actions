@@ -11,4 +11,5 @@ inputs:
 runs:
   using: "docker"
   image: "docker://debian:stretch-slim"
+  entrypoint: "entrypoint.sh"
   
