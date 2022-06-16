@@ -1,12 +1,11 @@
 name: A workflow for my Hello World file
 on:
-  push:
-#   workflow_dispatch:
-#     inputs:
-#       Test_Name:
-#         description: Just a test
-#         required: True
-#         type: String
+  workflow_dispatch:
+    inputs:
+      Test_Name:
+        description: Just a test
+        required: True
+        type: String
 jobs:
   build:
     name: Hello world action
