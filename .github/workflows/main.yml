@@ -1,5 +1,11 @@
 name: A workflow for my Hello World file
-on: push
+on:
+  workflow_dispatch:
+    inputs:
+      Test_Name:
+        description: Just a test
+        required: True
+        type: String
 jobs:
   build:
     name: Hello world action
@@ -9,3 +15,12 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
+  testjob:
+    name: This is a test job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./test-action
+        with:
+          TEST_NAME: ${{ inputs.Test_Name }}
+    
